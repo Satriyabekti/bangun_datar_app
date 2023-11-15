@@ -67,7 +67,16 @@ class Persegipage extends StatelessWidget {
 
             ],
           ),
-          Obx(()=> Text(_persegiController.hasil.value))
+          Obx(
+                  ()=> Text(
+                      _persegiController.hasil.value,
+                  style: TextStyle(
+                    color: _persegiController.isHitungLuas.value
+                        ? Colors.greenAccent
+                        : Colors.orangeAccent
+                  ),
+                  ),
+          ),
 
         ],
       ),
